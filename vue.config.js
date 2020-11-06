@@ -4,7 +4,7 @@ function resolve(dir) {
 }
 module.exports = {
   css: {
-    modules: true
+    requireModuleExtension: true
   },
   chainWebpack: config => {
     config.resolve.alias
@@ -12,5 +12,6 @@ module.exports = {
       .set("@assets", resolve("src/assets"))
       .set("@components", resolve("src/components"))
       .set("@views", resolve("src/views"))
+      .set("@utils", resolve("src/utils"))
   },
 }
