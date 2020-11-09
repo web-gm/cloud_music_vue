@@ -1,12 +1,15 @@
 <template>
   <div>
-      发现音乐
+      <slider></slider>
   </div>
 </template>
 
 <script>
+import slider from './components/Slider'
 export default {
-
+  components: {
+    slider
+  }
 }
 </script>
 

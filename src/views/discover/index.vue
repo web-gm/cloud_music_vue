@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="nav-discover">
-      <div class="container">
+      <div class="container" style="padding-left: 360px;">
         <router-link
           class="item"
           v-for="(item, index) in navs"
