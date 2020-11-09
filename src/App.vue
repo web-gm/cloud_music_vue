@@ -22,7 +22,7 @@ export default {
       navs: [
         {
           title: '发现音乐',
-          link: '/'
+          link: '/discover'
         },
         {
           title: '我的音乐',
@@ -30,7 +30,7 @@ export default {
         },
         {
           title: '朋友',
-          link: '/frient'
+          link: '/friend'
         },
         {
           title: '商城',
@@ -57,6 +57,10 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+.container{
+  width: 1100px;
+  margin: 0 auto;
+}
 .header {
   height: 70px;
   box-sizing: border-box;
@@ -65,6 +69,7 @@ export default {
   .wraper {
     width: 1100px;
     margin: 0 auto;
+    overflow: hidden;
     .logo {
       float: left;
       width: 176px;
@@ -92,7 +97,7 @@ export default {
         &.router-link-active::after{
           content: '';
           border: 8px solid transparent;
-          border-bottom: 8px solid red;
+          border-bottom: 8px solid #c20c0c;
           width:0;
           height:0;
           position: absolute;
