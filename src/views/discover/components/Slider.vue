@@ -45,15 +45,18 @@ export default {
   },
   methods: {
     async get () {
-      const res = await getBanner()
-      console.log(res)
-      this.banners = res.banners
-      this.banner = res.banners[0]
+      const { code, banners } = await getBanner()
+      if (code === 200) {
+        this.banners = banners
+        this.banner = banners[0]
+      }
     },
     changeBanner (index) {
-      console.log(index)
       if (index < 0) {
         index = this.banners.length - 1
+      }
+      if (index >= this.banners.length) {
+        index = 0
       }
       this.banner = this.banners[index]
       this.key = index
